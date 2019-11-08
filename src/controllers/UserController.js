@@ -1,6 +1,18 @@
 const User = require('../models/User');
 
 class UserController {
+  async show(req, res){
+    const { id } = req.params;
+
+    const user = await User.findById(id)
+
+    if(!user){
+      return res.status(400).json({ error: 'User not found'})
+    }
+
+    return res.json(user)
+  }
+
   async index(req, res){
     const users = await User.find().select('-__v')
 
