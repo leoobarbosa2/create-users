@@ -7,7 +7,7 @@ class Database {
 
   mongo(){
     this.connection = mongoose.connect(
-      "mongodb+srv://leonardo:<password>@cluster0-41ikl.mongodb.net/test?retryWrites=true&w=majority",
+      "mongodb+srv://leonardo:leonardo@cluster0-41ikl.mongodb.net/users?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
